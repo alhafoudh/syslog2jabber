@@ -1,0 +1,23 @@
+---
+:logfile: syslog2jabber.log
+:jabber_debug: false
+:debug: true
+
+:username: mybot@jabber.org/ruby
+:password: supersecret
+
+:friends_list:
+  - admin1@jabber.org
+  - admin2@jabber.org
+
+:watch:
+  - :file: /var/log/syslog
+    :interval: 1
+    :rules:
+      - "CRON" : exclude
+      - "" : include
+  - :file: /var/log/auth.log
+    :interval: 1
+    :rules:
+      - "authentication failure" : include
+      - "" : exclude
