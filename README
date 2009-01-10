@@ -1,0 +1,9 @@
+syslog2jabber
+=============
+
+This is a service that allows you to setup notification of syslog messages to you Jabber account as instant messages.
+
+Libraries used:
+	xmpp4r
+	file-tail
+	yaml
