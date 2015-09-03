@@ -9,7 +9,7 @@ require 'file/tail'
 require 'socket'
 require 'time'
 
-config = YAML.load_file('config.yml')
+config = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)), 'config.yml'))
 
 
 Jabber::debug = config[:jabber_debug] ||= false
